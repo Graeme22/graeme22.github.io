@@ -35,9 +35,9 @@
 				<p><a href="https://madaidans-insecurities.github.io/linux.html">Linux</a> <a href="https://grsecurity.net/10_years_of_linux_security.pdf">is</a> <a href="https://www.reddit.com/r/GrapheneOS/comments/bddq5u/os_security_ios_vs_grapheneos_vs_stock_android/ekxifpa/">not</a> <a href="https://twitter.com/rootkovska/status/1136220742662664193">a</a> <a href="https://twitter.com/spendergrsec/status/1308734202330963970">secure</a> <a href="https://www.openwall.com/lists/oss-security/2020/10/05/5">operating</a> <a href="https://twitter.com/grsecurity/status/1249850031357788162">system</a>. Significant hardening is required to obtain respectable security, and even then the model is fundamentally flawed. The kernel is written in primarily memory-unsafe languages, contains massive amounts of attack surface, and security is not a priority for the developers.</p>
 				<p>However, that doesn't mean we can't do our best to improve these issues. In this post I'm going to take you through a hardened Linux installation, which is far from trivial. I'm using Artix Linux for the following reasons:</p>
 				<ul>
-					<li>I wanted a distro without <code>systemd</code>. I'm not one of those rabid systemd haters, but systemd doesn't really belong in a security-focused install. It contains massive attack surface, has a history of ignoring major security issues, and is far from minimalistic.</li>
-					<li>I wanted access to the <code>linux-hardened</code> kernel. It provides a lot of hardening patches and removes tons of attack surface, so it's a great poor man's <code>grsecurity</code>.</li>
-					<li>I wanted access to the AUR and the <code>pacman</code> package manager, because I'm very comfortable with them and the repositories are just massive.</li>
+					<li>I wanted a distro without <code>systemd</code>. systemd doesn't really belong in a security-focused install. It contains massive attack surface, has a history of ignoring major security issues, and is far from minimalistic.</li>
+					<li>I wanted access to the <code>linux-hardened</code> kernel. It provides a lot of hardening patches and removes tons of attack surface.
+					<li>I wanted access to the AUR and the <code>pacman</code> package manager, because I'm very comfortable with them and the repositories are huge.</li>
 					<li>Artix Linux, even more so than Arch Linux, is very minimalistic and lightweight.</li>
 					<li>I wanted a rolling release model. Although the later kernel versions have a lot more attack surface, I'd rather get bugfixes right away rather than waiting weeks or months while a known vulnerability is out in the wild.</li>
 				</ul>
@@ -47,8 +47,8 @@
 					<li>musl libc: musl is more minimal, strict, and secure than glibc. However, using musl requires jumping through a lot of hoops at this time.</li>
 					<li>Control Flow Integrity (CFI): compiling the kernel with CFI is a lot of work. However, without it we're left vulnerable to ROP and JOP chains.</li>
 					<li>Strong sandboxing and Mandatory Access Control (MAC): We will install AppArmor, but in and of itself that doesn't help much without a lot of additional configuration. I'll likely write in the future about using <code>bubblewrap</code> and <code>apparmor</code> together to provide strong sandboxing and fine-grained permissions for individual applications.</li>
-					<li>grsecurity patches: These address several notable security flaws in the kernel; however they are only available commercially :(</li>
-					<li>Hardened memory allocator: The <code>hardened_malloc</code> package readily provides this functionaliy; however, in my experience it breaks a lot of applications, for example <code>wlroots</code> and <code>dhcpcd</code>.</li>
+					<li>grsecurity patches: These address several notable security flaws in the kernel; however they are only available commercially.</li>
+					<li>Hardened memory allocator: The <code>hardened_malloc</code> package readily provides this functionality; however, in my experience it breaks a lot of applications, for example <code>wlroots</code> and <code>dhcpcd</code>.</li>
 				</ul>
 				<p>Without further ado, let's get started! Grab yourself an ISO and hop into a priveleged bash shell:</p>
 				<pre><code class="language-bash">$ bash
@@ -85,7 +85,9 @@ $ mkdir /mnt/tmp
 $ mkdir /mnt/home
 $ mkdir /mnt/boot
 $ mount /dev/sda3 /mnt/home
-$ mount /dev/sda1 /mnt/boot</code></pre>
+$ mount /dev/sda1 /mnt/boot
+$ mount /dev/mapper/vg-tmp /mnt/tmp
+$ mount /dev/mapper/vg-var /mnt/var</code></pre>
 				<p>Since I'm going to be using the <code>linux-hardened</code> kernel, we'll need Arch repository support:</p>
 				<pre><code class="language-bash">$ pacman -Sy artix-archlinux-support</code></pre>
 				<p>Add the following lines to <code>/etc/pacman.conf</code>:</p>
@@ -157,7 +159,7 @@ session		required			pam_limits.so
 session		required			pam_unix.so
 session		optional			pam_permit.so</code></pre>
 				<p>We also need to add a tag to <code>/etc/security/pam_mount.conf.xml</code> right before the closing <code>&lt;/pam_mount&gt;</code>:</p>
-				<pre><code>&lt;volume fstype="crypt" path="/home/.%(USER)" mountpoint="/home/%(USER)" user="*" options="loop,noatime" /&gt;</code></pre>
+				<pre><code>&lt;volume fstype="crypt" path="/home/.%(USER).img" mountpoint="/home/%(USER)" user="*" options="loop,noatime" /&gt;</code></pre>
 				<p>Now let's create the encrypted home directories for each user. You can of course change the size of the directories to whatever you need.</p>
 				<pre><code class="language-bash">$ dd if=/dev/urandom of=/home/.user.img bs=1G count=32 status=progress
 $ losetup /dev/loop0 /home/.user.img
