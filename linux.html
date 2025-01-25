@@ -1,1504 +1,281 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="icon" type="image/x-icon" href="favicon.ico?">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-		crossorigin="anonymous">
-	<link rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
-
-	<title>Græme Holliday</title>
-</head>
-
-<body>
+	
+    <title>Græme Holliday</title>
+  </head>
+  <body>
 	<nav class="navbar sticky-top navbar-expand navbar-light bg-light">
 		<div class="mx-auto order-0">
-			<a href="/index.html">
-				<div
-					class="navbar-brand mx-auto">
-					GRÆME
-					HOLLIDAY
-				</div>
-			</a>
+			<a href="https://graemeholliday.dev/index.html"><div class="navbar-brand mx-auto">GRÆME HOLLIDAY</div></a>
 		</div>
-		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2"
-			id="navbarSupportedContent">
-			<ul
-				class="navbar-nav ml-auto">
-				<li
-					class="nav-item">
-					<a class="nav-link"
-						href="/blog.html">Blog</a>
-				</li>
-				<li
-					class="nav-item">
-					<a class="nav-link"
-						href="https://www.github.com/Graeme22">GitHub</a>
-				</li>
-				<li
-					class="nav-item">
-					<a class="nav-link"
-						href="https://www.linkedin.com/in/graeme-holliday/">LinkedIn</a>
-				</li>
-				<li
-					class="nav-item">
-					<a class="nav-link"
-						href="https://www.upwork.com/freelancers/~01e942d2b39d73a488">Upwork</a>
-				</li>
+		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a class="nav-link" href="https://graemeholliday.dev/blog.html">Blog</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.github.com/Graeme22">GitHub</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/graeme-holliday/">LinkedIn</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.upwork.com/freelancers/~01e942d2b39d73a488">Upwork</a></li>
 			</ul>
 		</div>
 	</nav>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-2">
-			</div>
+			<div class="col-lg-2"></div>
 			<div class="col-lg-8">
-				<h3
-					style="margin-top: 32px;">
-					Hardened
-					Linux
-					Installation
-				</h3>
-				<p><i>11-19-2021</i>
-				</p>
-				<p><a href="https://madaidans-insecurities.github.io/linux.html">Linux</a>
-					<a
-						href="https://grsecurity.net/10_years_of_linux_security.pdf">is</a>
-					<a
-						href="https://www.reddit.com/r/GrapheneOS/comments/bddq5u/os_security_ios_vs_grapheneos_vs_stock_android/ekxifpa/">not</a>
-					<a
-						href="https://twitter.com/rootkovska/status/1136220742662664193">a</a>
-					<a
-						href="https://twitter.com/spendergrsec/status/1308734202330963970">secure</a>
-					<a
-						href="https://www.openwall.com/lists/oss-security/2020/10/05/5">operating</a>
-					<a
-						href="https://twitter.com/grsecurity/status/1249850031357788162">system</a>.
-					Significant
-					hardening
-					is
-					required
-					to
-					obtain
-					respectable
-					security,
-					and
-					even
-					then
-					the
-					model
-					is
-					fundamentally
-					flawed.
-					The
-					kernel
-					is
-					written
-					in
-					primarily
-					memory-unsafe
-					languages,
-					contains
-					massive
-					amounts
-					of
-					attack
-					surface,
-					and
-					security
-					is
-					not
-					a
-					priority
-					for
-					the
-					developers.
-				</p>
-				<p>However, that doesn't mean we can't
-					do
-					our
-					best
-					to
-					improve
-					these
-					issues.
-					In
-					this
-					post
-					I'm
-					going
-					to
-					take
-					you
-					through
-					a
-					hardened
-					Linux
-					installation,
-					which
-					is
-					far
-					from
-					trivial.
-					I'm
-					using
-					Artix
-					Linux
-					for
-					the
-					following
-					reasons:
-				</p>
+				<h3 style="margin-top: 32px;">Hardened Linux Installation</h3>
+				<p><i>11-19-2021</i></p>
+				<p><a href="https://madaidans-insecurities.github.io/linux.html">Linux</a> <a href="https://grsecurity.net/10_years_of_linux_security.pdf">is</a> <a href="https://www.reddit.com/r/GrapheneOS/comments/bddq5u/os_security_ios_vs_grapheneos_vs_stock_android/ekxifpa/">not</a> <a href="https://twitter.com/rootkovska/status/1136220742662664193">a</a> <a href="https://twitter.com/spendergrsec/status/1308734202330963970">secure</a> <a href="https://www.openwall.com/lists/oss-security/2020/10/05/5">operating</a> <a href="https://twitter.com/grsecurity/status/1249850031357788162">system</a>. Significant hardening is required to obtain respectable security, and even then the model is fundamentally flawed. The kernel is written in primarily memory-unsafe languages, contains massive amounts of attack surface, and security is not a priority for the developers.</p>
+				<p>However, that doesn't mean we can't do our best to improve these issues. In this post I'm going to take you through a hardened Linux installation, which is far from trivial. I'm using Artix Linux for the following reasons:</p>
 				<ul>
-					<li>I wanted a distro without <code>systemd</code>.
-						systemd
-						doesn't
-						really
-						belong
-						in
-						a
-						security-focused
-						install.
-						It
-						contains
-						massive
-						attack
-						surface,
-						has
-						a
-						history
-						of
-						ignoring
-						major
-						security
-						issues,
-						and
-						is
-						far
-						from
-						minimalistic.
-					</li>
-					<li>I wanted access to the <code>linux-hardened</code>
-						kernel.
-						It
-						provides
-						a
-						lot
-						of
-						hardening
-						patches
-						and
-						removes
-						tons
-						of
-						attack
-						surface.
-					<li>I wanted access to the AUR and
-						the
-						<code>pacman</code>
-						package
-						manager,
-						because
-						I'm
-						very
-						comfortable
-						with
-						them
-						and
-						the
-						repositories
-						are
-						huge.
-					</li>
-					<li>Artix Linux, even more so than
-						Arch
-						Linux,
-						is
-						very
-						minimalistic
-						and
-						lightweight.
-					</li>
-					<li>I wanted a rolling release model.
-						Although
-						the
-						later
-						kernel
-						versions
-						have
-						a
-						lot
-						more
-						attack
-						surface,
-						I'd
-						rather
-						get
-						bugfixes
-						right
-						away
-						rather
-						than
-						waiting
-						weeks
-						or
-						months
-						while
-						a
-						known
-						vulnerability
-						is
-						out
-						in
-						the
-						wild.
-					</li>
+					<li>I wanted a distro without <code>systemd</code>. systemd doesn't really belong in a security-focused install. It contains massive attack surface, has a history of ignoring major security issues, and is far from minimalistic.</li>
+					<li>I wanted access to the <code>linux-hardened</code> kernel. It provides a lot of hardening patches and removes tons of attack surface.
+					<li>I wanted access to the AUR and the <code>pacman</code> package manager, because I'm very comfortable with them and the repositories are huge.</li>
+					<li>Artix Linux, even more so than Arch Linux, is very minimalistic and lightweight.</li>
+					<li>I wanted a rolling release model. Although the later kernel versions have a lot more attack surface, I'd rather get bugfixes right away rather than waiting weeks or months while a known vulnerability is out in the wild.</li>
 				</ul>
-				<p>Before we proceed, I want to make
-					sure
-					to
-					clarify
-					that
-					this
-					tutorial
-					only
-					provides
-					a
-					starting
-					point
-					and
-					by
-					no
-					means
-					guarantees
-					a
-					secure
-					system.
-					Missing
-					elements
-					include
-					but
-					are
-					not
-					limited
-					to:
-				</p>
+				<p>Before we proceed, I want to make sure to clarify that this tutorial only provides a starting point and by no means guarantees a secure system. Missing elements include but are not limited to:</p>
 				<ul>
-					<li>Secure boot: I might look into
-						this
-						in
-						a
-						future
-						tutorial!
-						However,
-						secure
-						boot
-						is
-						notoriously
-						difficult
-						on
-						Linux.
-						This
-						leaves
-						the
-						system
-						vulnerable
-						to
-						attacks
-						like
-						<a
-							href="https://en.wikipedia.org/wiki/Evil_maid_attack">Evil
-							Maid</a>.
-					</li>
-					<li>musl libc: musl is more minimal,
-						strict,
-						and
-						secure
-						than
-						glibc.
-						However,
-						using
-						musl
-						requires
-						jumping
-						through
-						a
-						lot
-						of
-						hoops
-						at
-						this
-						time.
-					</li>
-					<li>Control Flow Integrity (CFI):
-						compiling
-						the
-						kernel
-						with
-						CFI
-						is
-						a
-						lot
-						of
-						work.
-						However,
-						without
-						it
-						we're
-						left
-						vulnerable
-						to
-						ROP
-						and
-						JOP
-						chains.
-					</li>
-					<li>Strong sandboxing and Mandatory
-						Access
-						Control
-						(MAC):
-						We
-						will
-						install
-						AppArmor,
-						but
-						in
-						and
-						of
-						itself
-						that
-						doesn't
-						help
-						much
-						without
-						a
-						lot
-						of
-						additional
-						configuration.
-						I'll
-						likely
-						write
-						in
-						the
-						future
-						about
-						using
-						<code>bubblewrap</code>
-						and
-						<code>apparmor</code>
-						together
-						to
-						provide
-						strong
-						sandboxing
-						and
-						fine-grained
-						permissions
-						for
-						individual
-						applications.
-					</li>
-					<li>grsecurity patches: These address
-						several
-						notable
-						security
-						flaws
-						in
-						the
-						kernel;
-						however
-						they
-						are
-						only
-						available
-						commercially.
-					</li>
-					<li>Hardened memory allocator: The
-						<code>hardened_malloc</code>
-						package
-						readily
-						provides
-						this
-						functionality;
-						however,
-						in
-						my
-						experience
-						it
-						breaks
-						a
-						lot
-						of
-						applications,
-						for
-						example
-						<code>wlroots</code>
-						and
-						<code>dhcpcd</code>.
-					</li>
+					<li>Secure boot: I might look into this in a future tutorial! However, secure boot is notoriously difficult on Linux. This leaves the system vulnerable to attacks like <a href="https://en.wikipedia.org/wiki/Evil_maid_attack">Evil Maid</a>.</li>
+					<li>musl libc: musl is more minimal, strict, and secure than glibc. However, using musl requires jumping through a lot of hoops at this time.</li>
+					<li>Control Flow Integrity (CFI): compiling the kernel with CFI is a lot of work. However, without it we're left vulnerable to ROP and JOP chains.</li>
+					<li>Strong sandboxing and Mandatory Access Control (MAC): We will install AppArmor, but in and of itself that doesn't help much without a lot of additional configuration. I'll likely write in the future about using <code>bubblewrap</code> and <code>apparmor</code> together to provide strong sandboxing and fine-grained permissions for individual applications.</li>
+					<li>grsecurity patches: These address several notable security flaws in the kernel; however they are only available commercially.</li>
+					<li>Hardened memory allocator: The <code>hardened_malloc</code> package readily provides this functionality; however, in my experience it breaks a lot of applications, for example <code>wlroots</code> and <code>dhcpcd</code>.</li>
 				</ul>
-				<p>Without further ado, let's get
-					started!
-					Grab
-					yourself
-					an
-					ISO
-					and
-					hop
-					into
-					a
-					priveleged
-					bash
-					shell:
-				</p>
+				<p>Without further ado, let's get started! Grab yourself an ISO and hop into a priveleged bash shell:</p>
 				<pre><code class="language-bash">$ bash
-						$
-						sudo
-						su</code>
-				</pre>
-				<p>Next step is partitioning the disks.
-					For
-					this
-					setup,
-					I
-					wanted
-					three
-					partitions:
-				</p>
+$ sudo su</code></pre>
+				<p>Next step is partitioning the disks. For this setup, I wanted three partitions:</p>
 				<ul>
-					<li>256M EFI partition: For the bootloader,
-						kernel,
-						and
-						initrd.
-					</li>
-					<li>20G root partition: Will be LUKS
-						with
-						underlying
-						LVM
-						for
-						fine-grained
-						control
-						over
-						partitions
-						with
-						the
-						fstab.
-					</li>
-					<li>The rest of the disk: Will contain
-						individual
-						encrypted
-						home
-						directories
-						we
-						can
-						mount
-						at
-						<code>/home</code>.
-					</li>
+					<li>256M EFI partition: For the bootloader, kernel, and initrd.</li>
+					<li>20G root partition: Will be LUKS with underlying LVM for fine-grained control over partitions with the fstab.</li>
+					<li>The rest of the disk: Will contain individual encrypted home directories we can mount at <code>/home</code>.</li>
 				</ul>
-				<p>Use whatever partition manager
-					you
-					want
-					to
-					create
-					the
-					partitions.
-					I
-					used
-					<code>fdisk</code>
-					with
-					a
-					GPT
-					label.
-				</p>
-				<p>Next, I'm going to encrypt the
-					second
-					partition,
-					which
-					will
-					be
-					at
-					<code>/dev/sda2</code>.
-				<pre><code class="language-bash">$ cryptsetup -y -v --use-random luksFormat
-						/dev/sda2
-						$
-						cryptsetup
-						luksOpen
-						/dev/sda2
-						crypt</code>
-				</pre>
-				<p>Now we can create our logical volumes:
-				</p>
+				<p>Use whatever partition manager you want to create the partitions. I used <code>fdisk</code> with a GPT label.</p>
+				<p>Next, I'm going to encrypt the second partition, which will be at <code>/dev/sda2</code>.
+				<pre><code class="language-bash">$ cryptsetup -y -v --use-random luksFormat /dev/sda2
+$ cryptsetup luksOpen /dev/sda2 crypt</code></pre>
+				<p>Now we can create our logical volumes:</p>
 				<pre><code class="language-bash">$ pvcreate /dev/mapper/crypt
-						$
-						vgcreate
-						vg
-						/dev/mapper/crypt
-						$
-						lvcreate
-						--size
-						4G
-						vg
-						--name
-						swap
-						$
-						lvcreate
-						--size
-						4G
-						vg
-						--name
-						tmp
-						$
-						lvcreate
-						--size
-						4G
-						vg
-						--name
-						var
-						$
-						lvcreate
-						-l
-						100%FREE
-						vg
-						--name
-						root</code>
-				</pre>
-				<p>Obviously change the sizes to whatever
-					you
-					want.
-				</p>
-				<p>Let's make the filesystems:
-				</p>
+$ vgcreate vg /dev/mapper/crypt
+$ lvcreate --size 4G vg --name swap
+$ lvcreate --size 4G vg --name tmp
+$ lvcreate --size 4G vg --name var
+$ lvcreate -l 100%FREE vg --name root</code></pre>
+				<p>Obviously change the sizes to whatever you want.</p>
+				<p>Let's make the filesystems:</p>
 				<pre><code class="language-bash">$ mkfs.vfat -F32 /dev/sda1
-						$
-						mkfs.ext4
-						/dev/sda3
-						$
-						mkfs.ext4
-						/dev/mapper/vg-root
-						$
-						mkfs.ext4
-						/dev/mapper/vg-tmp
-						$
-						mkfs.ext4
-						/dev/mapper/vg-var
-						$
-						mkswap
-						/dev/mapper/vg-swap</code>
-				</pre>
-				<p>With that out of the way, we can
-					mount
-					everything
-					to
-					prepare
-					for
-					the
-					chroot:
-				</p>
+$ mkfs.ext4 /dev/sda3
+$ mkfs.ext4 /dev/mapper/vg-root
+$ mkfs.ext4 /dev/mapper/vg-tmp
+$ mkfs.ext4 /dev/mapper/vg-var
+$ mkswap /dev/mapper/vg-swap</code></pre>
+				<p>With that out of the way, we can mount everything to prepare for the chroot:</p>
 				<pre><code class="language-bash">$ mount /dev/mapper/vg-root /mnt
-						$
-						mkdir
-						/mnt/var
-						$
-						mkdir
-						/mnt/tmp
-						$
-						mkdir
-						/mnt/home
-						$
-						mkdir
-						/mnt/boot
-						$
-						mount
-						/dev/sda3
-						/mnt/home
-						$
-						mount
-						/dev/sda1
-						/mnt/boot
-						$
-						mount
-						/dev/mapper/vg-tmp
-						/mnt/tmp
-						$
-						mount
-						/dev/mapper/vg-var
-						/mnt/var</code>
-				</pre>
-				<p>Since I'm going to be using the
-					<code>linux-hardened</code>
-					kernel,
-					we'll
-					need
-					Arch
-					repository
-					support:
-				</p>
-				<pre><code class="language-bash">$ pacman -Sy
-						artix-archlinux-support</code>
-				</pre>
-				<p>Add the following lines to <code>/etc/pacman.conf</code>:
-				</p>
+$ mkdir /mnt/var
+$ mkdir /mnt/tmp
+$ mkdir /mnt/home
+$ mkdir /mnt/boot
+$ mount /dev/sda3 /mnt/home
+$ mount /dev/sda1 /mnt/boot
+$ mount /dev/mapper/vg-tmp /mnt/tmp
+$ mount /dev/mapper/vg-var /mnt/var</code></pre>
+				<p>Since I'm going to be using the <code>linux-hardened</code> kernel, we'll need Arch repository support:</p>
+				<pre><code class="language-bash">$ pacman -Sy artix-archlinux-support</code></pre>
+				<p>Add the following lines to <code>/etc/pacman.conf</code>:</p>
 				<pre><code>[extra]
-						Include
-						=
-						/etc/pacman.d/mirrorlist-arch
-						[community]
-						Include
-						=
-						/etc/pacman.d/mirrorlist-arch</code>
-				</pre>
-				<p>Let's update pacman with the new
-					repositories:
-				</p>
-				<pre><code class="language-bash">$ pacman
-						-Sy</code>
-				</pre>
-				<p>Almost ready for the chroot! Let's
-					install
-					some
-					packages
-					first.
-					Replace
-					<code>intel-ucode</code>
-					with
-					<code>amd-ucode</code>
-					if
-					needed.
-					We'll
-					use
-					all
-					of
-					these
-					packages
-					later
-					on,
-					so
-					I'm
-					just
-					installing
-					them
-					now.
-				</p>
-				<pre><code class="language-bash">$ basestrap /mnt base base-devel
-						runit
-						elogind-runit
-						linux-hardened
-						linux-firmware
-						linux-hardened-headers
-						efibootmgr
-						lvm2
-						mkinitcpio
-						dhcpcd-runit
-						intel-ucode
-						git
-						efitools
-						artix-archlinux-support
-						grub
-						pam_mount
-						apparmor</code>
-				</pre>
-				<p>Finally, let's create the fstab
-					so
-					we
-					can
-					chroot!
-				</p>
+Include = /etc/pacman.d/mirrorlist-arch
+[community]
+Include = /etc/pacman.d/mirrorlist-arch</code></pre>
+				<p>Let's update pacman with the new repositories:</p>
+				<pre><code class="language-bash">$ pacman -Sy</code></pre>
+				<p>Almost ready for the chroot! Let's install some packages first. Replace <code>intel-ucode</code> with <code>amd-ucode</code> if needed. We'll use all of these packages later on, so I'm just installing them now.</p>
+				<pre><code class="language-bash">$ basestrap /mnt base base-devel runit elogind-runit linux-hardened linux-firmware linux-hardened-headers efibootmgr lvm2 mkinitcpio dhcpcd-runit intel-ucode git efitools artix-archlinux-support grub pam_mount apparmor</code></pre>
+				<p>Finally, let's create the fstab so we can chroot!</p>
 				<pre><code class="language-bash">$ fstabgen -U /mnt >> /mnt/etc/fstab
-						$
-						artix-chroot
-						/mnt</code>
-				</pre>
-				<p>We'll modify <code>/etc/fstab</code>
-					to
-					have
-					fine-grained
-					permissions.
-					We
-					also
-					can't
-					use
-					UUIDs
-					for
-					the
-					logical
-					volumes,
-					so
-					those
-					need
-					to
-					use
-					labels
-					intead.
-				</p>
-				<pre><code>/dev/mapper/vg-root / ext4 defaults 1 1
-						/dev/mapper/vg-tmp
-						/tmp
-						ext4
-						defaults,nosuid,noexec,nodev
-						1
-						2
-						/dev/mapper/vg-var
-						/var
-						ext4
-						defaults,nosuid
-						1
-						2
-						[UUID
-						of
-						/dev/sda3]
-						/home
-						ext4
-						defaults,nosuid,noexec,nodev
-						1
-						2
-						[UUID
-						of
-						/dev/sda1]
-						/boot
-						vfat
-						defaults,nosuid,noexec,nodev
-						1
-						2
-						/dev/mapper/vg-swap
-						none
-						swap
-						defaults
-						0
-						0
-						proc
-						/proc
-						proc
-						nosuid,nodev,noexec,hidepid=2,gid=proc
-						0
-						0</code>
-				</pre>
-				<p>Again, we need to modify <code>/etc/pacman.conf</code>:
-				</p>
+$ artix-chroot /mnt</code></pre>
+				<p>We'll modify <code>/etc/fstab</code> to have fine-grained permissions. We also can't use UUIDs for the logical volumes, so those need to use labels intead.</p>
+				<pre><code>/dev/mapper/vg-root	/	ext4	defaults				1 1
+/dev/mapper/vg-tmp	/tmp	ext4	defaults,nosuid,noexec,nodev		1 2
+/dev/mapper/vg-var	/var	ext4	defaults,nosuid				1 2
+[UUID of /dev/sda3]	/home	ext4	defaults,nosuid,noexec,nodev		1 2
+[UUID of /dev/sda1]	/boot	vfat	defaults,nosuid,noexec,nodev		1 2
+/dev/mapper/vg-swap	none	swap	defaults				0 0
+proc			/proc	proc	nosuid,nodev,noexec,hidepid=2,gid=proc	0 0</code></pre>
+				<p>Again, we need to modify <code>/etc/pacman.conf</code>:</p>
 				<pre><code>[extra]
-						Include
-						=
-						/etc/pacman.d/mirrorlist-arch
-						[community]
-						Include
-						=
-						/etc/pacman.d/mirrorlist-arch</code>
-				</pre>
-				<p>Now we set the system time:
-				</p>
-				<pre><code class="language-bash">$ ln -sf /usr/share/zoneinfo/UTC
-						/etc/localtime
-						$
-						hwclock
-						--systohc</code>
-				</pre>
-				<p>Next is system locale. Edit <code>/etc/locale.gen</code>
-					and
-					uncomment
-					any
-					desires
-					locales,
-					then
-					run:
-				</p>
-				<pre><code class="language-bash">$
-						locale-gen</code>
-				</pre>
-				<p>Optionally, we can set system-wide
-					locales
-					in
-					<code>/etc/locale.conf</code>:
-				</p>
+Include = /etc/pacman.d/mirrorlist-arch
+[community]
+Include = /etc/pacman.d/mirrorlist-arch</code></pre>
+				<p>Now we set the system time:</p>
+				<pre><code class="language-bash">$ ln -sf /usr/share/zoneinfo/UTC /etc/localtime
+$ hwclock --systohc</code></pre>
+				<p>Next is system locale. Edit <code>/etc/locale.gen</code> and uncomment any desires locales, then run:</p>
+				<pre><code class="language-bash">$ locale-gen</code></pre>
+				<p>Optionally, we can set system-wide locales in <code>/etc/locale.conf</code>:</p>
 				<pre><code>export LANG="en_US.UTF-8"
-						export
-						LC_COLLATE="C"</code>
-				</pre>
-				<p>Next let's create our users. Make
-					sure
-					not
-					to
-					add
-					the
-					<code>-m</code>
-					flag,
-					we
-					don't
-					want
-					to
-					create
-					the
-					home
-					directory
-					yet!
-				</p>
+export LC_COLLATE="C"</code></pre>
+				<p>Next let's create our users. Make sure not to add the <code>-m</code> flag, we don't want to create the home directory yet!</p>
 				<pre><code class="language-bash">$ useradd user
-						$
-						useradd
-						admin
-						$
-						passwd
-						user
-						$
-						passwd
-						admin</code>
-				</pre>
-				<p>This setup locks the root account,
-					so
-					admin
-					will
-					be
-					our
-					sole
-					user
-					with
-					root
-					permissions.
-					Let's
-					set
-					that
-					up
-					with
-					<code>visudo</code>:
-				</p>
-				<pre><code class="language-bash">$ visudo -f
-						/etc/sudoers.d/admin-account</code>
-				</pre>
-				<pre><code>admin ALL=(ALL) ALL</code>
-				</pre>
-				<p>We'll leave <code>/etc/securetty</code>
-					blank
-					to
-					reduce
-					attack
-					surface:
-				</p>
-				<pre><code class="language-bash">$ echo "" >
-						/etc/securetty</code>
-				</pre>
-				<p>By default <code>su</code> logs
-					into
-					root,
-					let's
-					turn
-					that
-					off
-					by
-					adding
-					a
-					line
-					to
-					<code>/etc/pam.d/su</code>:
-				</p>
-				<pre><code>auth required pam_wheel.so
-						use_uid</code>
-				</pre>
-				<p>Now we can lock the root account
-					for
-					good.
-					From
-					now
-					on
-					we'll
-					just
-					use
-					<code>sudo</code>
-					from
-					the
-					admin
-					account.
-				</p>
-				<pre><code class="language-bash">$ passwd -l
-						root</code>
-				</pre>
-				<p>Let's modify <code>/etc/pam.d/system-auth</code>
-					so
-					we
-					can
-					use
-					<code>pam_mount</code>:
-				</p>
-				<pre><code>auth required pam_faillock.so preauth
-						auth
-						[success=1
-						default=ignore]
-						pam_unix.so
-						try_first_pass
-						nullok
-						auth
-						[default=die]
-						pam_faillock.so
-						authfail
-						auth
-						optional
-						pam_mount.so
-						auth
-						optional
-						pam_permit.so
-						auth
-						required
-						pam_env.so
-						auth
-						required
-						pam_faillock.so
-						authsucc
+$ useradd admin
+$ passwd user
+$ passwd admin</code></pre>
+				<p>This setup locks the root account, so admin will be our sole user with root permissions. Let's set that up with <code>visudo</code>:</p>
+				<pre><code class="language-bash">$ visudo -f /etc/sudoers.d/admin-account</code></pre>
+				<pre><code>admin ALL=(ALL) ALL</code></pre>
+				<p>We'll leave <code>/etc/securetty</code> blank to reduce attack surface:</p>
+				<pre><code class="language-bash">$ echo "" > /etc/securetty</code></pre>
+				<p>By default <code>su</code> logs into root, let's turn that off by adding a line to <code>/etc/pam.d/su</code>:</p>
+				<pre><code>auth	required	pam_wheel.so	use_uid</code></pre>
+				<p>Now we can lock the root account for good. From now on we'll just use <code>sudo</code> from the admin account.</p>
+				<pre><code class="language-bash">$ passwd -l root</code></pre>
+				<p>Let's modify <code>/etc/pam.d/system-auth</code> so we can use <code>pam_mount</code>:</p>
+				<pre><code>auth		required			pam_faillock.so	preauth
+auth		[success=1 default=ignore]	pam_unix.so	try_first_pass nullok
+auth		[default=die]			pam_faillock.so	authfail
+auth		optional			pam_mount.so
+auth		optional			pam_permit.so
+auth		required			pam_env.so
+auth		required			pam_faillock.so	authsucc
 
-						account
-						required
-						pam_unix.so
-						account
-						optional
-						pam_permit.so
-						account
-						required
-						pam_time.so
+account		required			pam_unix.so
+account		optional			pam_permit.so
+account		required			pam_time.so
 
-						password
-						optional
-						pam_mount.so
-						password
-						required
-						pam_unix.so
-						try_first_pass
-						nullok
-						shadow
-						sha512
-						password
-						optional
-						pam_permit.so
+password	optional			pam_mount.so
+password	required			pam_unix.so	try_first_pass nullok shadow sha512
+password	optional			pam_permit.so
 
-						session
-						optional
-						pam_mount.so
-						session
-						required
-						pam_limits.so
-						session
-						required
-						pam_unix.so
-						session
-						optional
-						pam_permit.so</code>
-				</pre>
-				<p>We also need to add a tag to <code>/etc/security/pam_mount.conf.xml</code>
-					right
-					before
-					the
-					closing
-					<code>&lt;/pam_mount&gt;</code>:
-				</p>
-				<pre><code>&lt;volume fstype="crypt" path="/home/.%(USER).img" mountpoint="/home/%(USER)"
-						user="*"
-						options="loop,noatime"
-						/&gt;</code>
-				</pre>
-				<p>Now let's create the encrypted
-					home
-					directories
-					for
-					each
-					user.
-					You
-					can
-					of
-					course
-					change
-					the
-					size
-					of
-					the
-					directories
-					to
-					whatever
-					you
-					need.
-				</p>
-				<pre><code class="language-bash">$ dd if=/dev/urandom of=/home/.user.img
-						bs=1G
-						count=32
-						status=progress
-						$
-						losetup
-						/dev/loop0
-						/home/.user.img
-						$
-						cryptsetup
-						luksFormat
-						/dev/loop0
-						$
-						cryptsetup
-						luksOpen
-						/dev/loop0
-						user
-						$
-						mkfs.ext4
-						/dev/mapper/user
-						$
-						cryptsetup
-						luksClose
-						user</code>
-				</pre>
-				<p>Make sure the password is the same
-					as
-					the
-					user's,
-					because
-					<code>pam_mount</code>
-					requires
-					they
-					be
-					the
-					same.
-					Let's
-					do
-					the
-					same
-					for
-					the
-					admin
-					account:
-				</p>
-				<pre><code class="language-bash">$ dd if=/dev/urandom of=/home/.admin.img
-						bs=1G
-						count=32
-						status=progress
-						$
-						losetup
-						/dev/loop1
-						/home/.admin.img
-						$
-						cryptsetup
-						luksFormat
-						/dev/loop1
-						$
-						cryptsetup
-						luksOpen
-						/dev/loop1
-						admin
-						$
-						mkfs.ext4
-						/dev/mapper/admin
-						$
-						cryptsetup
-						luksClose
-						admin</code>
-				</pre>
-				<p>Let's setup the hostname:
-				</p>
-				<pre><code class="language-bash">$ echo "artix" >
-						/etc/hostname</code>
-				</pre>
-				<p>Then add the following lines to
-					<code>/etc/hosts</code>:
-				</p>
-				<pre><code>127.0.0.1 localhost
-						::1
-						localhost
-						127.0.1.1
-						artix.localdomain
-						artix</code>
-				</pre>
-				<p>Now we need to generate our initrd
-					by
-					editing
-					the
-					hooks
-					in
-					<code>/etc/mkinitcpio.conf</code>:
-				</p>
-				<pre><code>HOOKS=(base udev autodetect modconf block encrypt keyboard
-						keymap
-						lvm2
-						resume
-						filesystems
-						fsck)</code>
-				</pre>
-				<p>With that done, we can go ahead
-					and
-					generate
-					it:
-				</p>
-				<pre><code class="language-bash">$ mkinitcpio -p
-						linux-hardened</code>
-				</pre>
-				<p>Now we can install our bootloader:
-				</p>
-				<pre><code class="language-bash">$ grub-install --target=x86_64-efi
-						--efi-directory=/boot
-						--bootloader-id=grub_uefi</code>
-				</pre>
-				<p>Let's modify our kernel parameters
-					to
-					detect
-					the
-					LUKS
-					volume
-					in
-					<code>/etc/default/grub</code>:
-				</p>
-				<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/sda2:crypt
-						slab_nomerge
-						slub_debug=FZ
-						init_on_alloc=1
-						init_on_free=1
-						page_alloc.shuffle=1
-						pti=on
-						debugfs=off
-						oops=panic
-						module.sig_enforce=1
-						lockdown=confidentiality
-						mce=0
-						random.trust_cpu=off
-						intel_iommu=on
-						quiet
-						loglevel=0"</code>
-				</pre>
-				<p>We also add all the hardened boot
-					parameters
-					here.
-					If
-					using
-					an
-					AMD
-					CPU,
-					substitute
-					<code>intel_iommu</code>
-					with
-					<code>amd_iommu</code>.
-					Now
-					we
-					can
-					generate
-					the
-					grub
-					config:
-				<p>
-				<pre><code class="language-bash">$ grub-mkconfig -o
-						/boot/grub/grub.cfg</code>
-				</pre>
-				<p>Let's minimize attack surface by
-					soft-blocking
-					with
-					<code>rfkill</code>.
-					Afterwards
-					you
-					can
-					turn
-					back
-					on
-					selectively
-					just
-					the
-					items
-					you
-					need.
-				</p>
-				<pre><code class="language-bash">$ rfkill block
-						all</code>
-				</pre>
-				<p>We're all set to boot into the
-					new
-					system!
-				</p>
+session		optional			pam_mount.so
+session		required			pam_limits.so
+session		required			pam_unix.so
+session		optional			pam_permit.so</code></pre>
+				<p>We also need to add a tag to <code>/etc/security/pam_mount.conf.xml</code> right before the closing <code>&lt;/pam_mount&gt;</code>:</p>
+				<pre><code>&lt;volume fstype="crypt" path="/home/.%(USER).img" mountpoint="/home/%(USER)" user="*" options="loop,noatime" /&gt;</code></pre>
+				<p>Now let's create the encrypted home directories for each user. You can of course change the size of the directories to whatever you need.</p>
+				<pre><code class="language-bash">$ dd if=/dev/urandom of=/home/.user.img bs=1G count=32 status=progress
+$ losetup /dev/loop0 /home/.user.img
+$ cryptsetup luksFormat /dev/loop0
+$ cryptsetup luksOpen /dev/loop0 user
+$ mkfs.ext4 /dev/mapper/user
+$ cryptsetup luksClose user</code></pre>
+				<p>Make sure the password is the same as the user's, because <code>pam_mount</code> requires they be the same. Let's do the same for the admin account:</p>
+				<pre><code class="language-bash">$ dd if=/dev/urandom of=/home/.admin.img bs=1G count=32 status=progress
+$ losetup /dev/loop1 /home/.admin.img
+$ cryptsetup luksFormat /dev/loop1
+$ cryptsetup luksOpen /dev/loop1 admin
+$ mkfs.ext4 /dev/mapper/admin
+$ cryptsetup luksClose admin</code></pre>
+				<p>Let's setup the hostname:</p>
+				<pre><code class="language-bash">$ echo "artix" > /etc/hostname</code></pre>
+				<p>Then add the following lines to <code>/etc/hosts</code>:</p>
+				<pre><code>127.0.0.1   localhost
+::1         localhost
+127.0.1.1   artix.localdomain   artix</code></pre>
+				<p>Now we need to generate our initrd by editing the hooks in <code>/etc/mkinitcpio.conf</code>:</p>
+				<pre><code>HOOKS=(base udev autodetect modconf block encrypt keyboard keymap lvm2 resume filesystems fsck)</code></pre>
+				<p>With that done, we can go ahead and generate it:</p>
+				<pre><code class="language-bash">$ mkinitcpio -p linux-hardened</code></pre>
+				<p>Now we can install our bootloader:</p>
+				<pre><code class="language-bash">$ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub_uefi</code></pre>
+				<p>Let's modify our kernel parameters to detect the LUKS volume in <code>/etc/default/grub</code>:</p>
+				<pre><code>GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=/dev/sda2:crypt slab_nomerge slub_debug=FZ init_on_alloc=1 init_on_free=1 page_alloc.shuffle=1 pti=on debugfs=off oops=panic module.sig_enforce=1 lockdown=confidentiality mce=0 random.trust_cpu=off intel_iommu=on quiet loglevel=0"</code></pre>
+				<p>We also add all the hardened boot parameters here. If using an AMD CPU, substitute <code>intel_iommu</code> with <code>amd_iommu</code>. Now we can generate the grub config:<p>
+				<pre><code class="language-bash">$ grub-mkconfig -o /boot/grub/grub.cfg</code></pre>
+				<p>Let's minimize attack surface by soft-blocking with <code>rfkill</code>. Afterwards you can turn back on selectively just the items you need.</p>
+				<pre><code class="language-bash">$ rfkill block all</code></pre>
+				<p>We're all set to boot into the new system!</p>
 				<pre><code class="language-bash">$ exit
-						$
-						exit
-						$
-						umount
-						-R
-						/mnt
-						$
-						reboot</code>
-				</pre>
-				<p>You should now be able to log in
-					to
-					one
-					of
-					the
-					accounts
-					you've
-					created,
-					but
-					not
-					root.
-					When
-					you
-					log
-					on,
-					the
-					home
-					directory
-					should
-					be
-					decrypted
-					and
-					mounted
-					on
-					<code>/home</code>.
-				</p>
-				<p>First things first: Let's get internet
-					up,
-					now
-					that
-					we
-					have
-					the
-					<code>/run</code>
-					directory:
-				</p>
-				<pre><code class="language-bash">$ sudo ln -s /etc/runit/sv/dhcpcd
-						/run/runit/service</code>
-				</pre>
-				<p>Next we'll set up an AUR package
-					manager--feel
-					free
-					to
-					use
-					a
-					different
-					one!
-				</p>
+$ exit
+$ umount -R /mnt
+$ reboot</code></pre>
+				<p>You should now be able to log in to one of the accounts you've created, but not root. When you log on, the home directory should be decrypted and mounted on <code>/home</code>.</p>
+				<p>First things first: Let's get internet up, now that we have the <code>/run</code> directory:</p>
+				<pre><code class="language-bash">$ sudo ln -s /etc/runit/sv/dhcpcd /run/runit/service</code></pre>
+				<p>Next we'll set up an AUR package manager--feel free to use a different one!</p>
 				<pre><code class="language-bash">$ git clone https://aur.archlinux.org/paru-bin.git
-						$
-						cd
-						paru-bin
-						$
-						makepkg
-						-si</code>
-				</pre>
-				<p>Now we'll setup a DKMS module from
-					the
-					AUR
-					called
-					LKRG,
-					which
-					tries
-					to
-					post-detect
-					kernel
-					exploits.
-					We
-					need
-					to
-					create
-					our
-					own
-					<code>runit</code>
-					service,
-					since
-					the
-					package
-					is
-					built
-					for
-					<code>systemd</code>
-					:(
-				<p>
+$ cd paru-bin
+$ makepkg -si</code></pre>
+				<p>Now we'll setup a DKMS module from the AUR called LKRG, which tries to post-detect kernel exploits. We need to create our own <code>runit</code> service, since the package is built for <code>systemd</code> :(<p>
 				<pre><code class="language-bash">$ paru -S lkrg-dkms
-						$
-						sudo
-						mkdir
-						/etc/runit/sv/lkrg</code>
-				</pre>
-				<p>Now let's create <code>/etc/runit/sv/lkrg/run</code>
-					with
-					the
-					following
-					content:
-				</p>
+$ sudo mkdir /etc/runit/sv/lkrg</code></pre>
+				<p>Now let's create <code>/etc/runit/sv/lkrg/run</code> with the following content:</p>
 				<pre><code class="language-shell">#!/bin/sh
-						modprobe
-						p_lkrg</code>
-				</pre>
-				<p>Now let's make the service executable
-					and
-					start
-					it
-					up:
-				</p>
+modprobe p_lkrg</code></pre>
+				<p>Now let's make the service executable and start it up:</p>
 				<pre><code class="language-bash">$ sudo chmod a+x /etc/runit/sv/lkrg/run
-						$
-						sudo
-						ln
-						-s
-						/etc/runit/sv/lkrg
-						/run/runit/service</code>
-				</pre>
-				<p>Now might be a good time to create
-					a
-					<code>.bashrc</code>
-					and
-					<code>.bash_profile</code>
-					in
-					your
-					home
-					directories.
-					Feel
-					free
-					to
-					<a
-						href="https://github.com/Graeme22/dotfiles">use
-						mine
-						as
-						an
-						example</a>.
-					Also
-					make
-					sure
-					the
-					ownership
-					of
-					the
-					home
-					directories
-					is
-					correct
-					(it
-					shouldn't
-					be
-					root)
-					and
-					that
-					the
-					permissions
-					are
-					700
-					(only
-					the
-					owner
-					can
-					read,
-					write,
-					or
-					execute).
-				</p>
-				<p>Now let's change kernel parameters
-					by
-					creating
-					<code>/etc/sysctl.conf</code>
-					to
-					harden
-					the
-					system:
-				</p>
+$ sudo ln -s /etc/runit/sv/lkrg /run/runit/service</code></pre>
+				<p>Now might be a good time to create a <code>.bashrc</code> and <code>.bash_profile</code> in your home directories. Feel free to <a href="https://github.com/Graeme22/dotfiles">use mine as an example</a>. Also make sure the ownership of the home directories is correct (it shouldn't be root) and that the permissions are 700 (only the owner can read, write, or execute).</p>
+				<p>Now let's change kernel parameters by creating <code>/etc/sysctl.conf</code> to harden the system:</p>
 				<pre><code>kernel.kptr_restrict=2
-						kernel.dmesg_restrict=1
-						kernel.printk=3
-						3
-						3
-						3
-						kernel.unprivileged_bpf_disabled=1
-						net.core.bpf_jit_harden=2
-						dev.tty.ldisc_autoload=0
-						vm.unprivileged_userfaultfd=0
-						kernel.kexec_load_disabled=1
-						kernel.sysrq=4
-						kernel.unprivileged_userns_clone=0
-						kernel.perf_event_paranoid=3
-						kernel.core_pattern=|/bin/false
+kernel.dmesg_restrict=1
+kernel.printk=3 3 3 3
+kernel.unprivileged_bpf_disabled=1
+net.core.bpf_jit_harden=2
+dev.tty.ldisc_autoload=0
+vm.unprivileged_userfaultfd=0
+kernel.kexec_load_disabled=1
+kernel.sysrq=4
+kernel.unprivileged_userns_clone=0
+kernel.perf_event_paranoid=3
+kernel.core_pattern=|/bin/false
 
-						net.ipv4.tcp_syncookies=1
-						net.ipv4.tcp_rfc1337=1
-						net.ipv4.tcp_timestamps=0
-						net.ipv4.conf.all.rp_filter=1
-						net.ipv4.conf.default.rp_filter=1
-						net.ipv4.conf.all.accept_redirects=0
-						net.ipv4.conf.default.accept_redirects=0
-						net.ipv4.conf.all.secure_redirects=0
-						net.ipv4.conf.default.secure_redirects=0
-						net.ipv6.conf.all.accept_redirects=0
-						net.ipv6.conf.default.accept_redirects=0
-						net.ipv4.conf.all.send_redirects=0
-						net.ipv4.conf.default.send_redirects=0
-						net.ipv4.icmp_echo_ignore_all=1
-						net.ipv4.conf.all.accept_source_route=0
-						net.ipv4.conf.default.accept_source_route=0
-						net.ipv6.conf.all.accept_source_route=0
-						net.ipv6.conf.default.accept_source_route=0
-						net.ipv6.conf.all.accept_ra=0
-						net.ipv6.conf.default.accept_ra=0
-						net.ipv4.tcp_sack=0
-						net.ipv4.tcp_dsack=0
-						net.ipv4.tcp_fack=0
+net.ipv4.tcp_syncookies=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.tcp_timestamps=0
+net.ipv4.conf.all.rp_filter=1
+net.ipv4.conf.default.rp_filter=1
+net.ipv4.conf.all.accept_redirects=0
+net.ipv4.conf.default.accept_redirects=0
+net.ipv4.conf.all.secure_redirects=0
+net.ipv4.conf.default.secure_redirects=0
+net.ipv6.conf.all.accept_redirects=0
+net.ipv6.conf.default.accept_redirects=0
+net.ipv4.conf.all.send_redirects=0
+net.ipv4.conf.default.send_redirects=0
+net.ipv4.icmp_echo_ignore_all=1
+net.ipv4.conf.all.accept_source_route=0
+net.ipv4.conf.default.accept_source_route=0
+net.ipv6.conf.all.accept_source_route=0
+net.ipv6.conf.default.accept_source_route=0
+net.ipv6.conf.all.accept_ra=0
+net.ipv6.conf.default.accept_ra=0
+net.ipv4.tcp_sack=0
+net.ipv4.tcp_dsack=0
+net.ipv4.tcp_fack=0
 
-						kernel.yama.ptrace_scope=2
-						vm.mmap_rnd_bits=32
-						vm.mmap_rnd_compat_bits=16
-						vm.swappiness=1
-						fs.protected_symlinks=1
-						fs.protected_hardlinks=1
-						fs.protected_fifos=2
-						fs.protected_regular=2
-						fs.suid_dumpable=0</code>
-				</pre>
-				<p>For an in-depth explanation of
-					these
-					settings,
-					see
-					<a
-						href="https://madaidans-insecurities.github.io/guides/linux-hardening.html#sysctl">here</a>.
-				</p>
-				<p>Let's fix permissions for some
-					important
-					directories:
-				</p>
-				<pre><code class="language-bash">$ sudo chmod 700 /boot /usr/src /lib/modules
-						/usr/lib/modules</code>
-				</pre>
-				<p>Finally, let's update our umask
-					in
-					<code>/etc/profile</code>:
-				</p>
-				<pre><code>umask 0077</code>
-				</pre>
-				<p>That's it! We now have a base hardened
-					system.
-					This
-					could
-					be
-					a
-					good
-					starting
-					point
-					for
-					a
-					server,
-					or
-					perhaps
-					a
-					desktop
-					system
-					with
-					a
-					Wayland-based
-					window
-					manager.
-				</p>
+kernel.yama.ptrace_scope=2
+vm.mmap_rnd_bits=32
+vm.mmap_rnd_compat_bits=16
+vm.swappiness=1
+fs.protected_symlinks=1
+fs.protected_hardlinks=1
+fs.protected_fifos=2
+fs.protected_regular=2
+fs.suid_dumpable=0</code></pre>
+				<p>For an in-depth explanation of these settings, see <a href="https://madaidans-insecurities.github.io/guides/linux-hardening.html#sysctl">here</a>.</p>
+				<p>Let's fix permissions for some important directories:</p>
+				<pre><code class="language-bash">$ sudo chmod 700 /boot /usr/src /lib/modules /usr/lib/modules</code></pre>
+				<p>Finally, let's update our umask in <code>/etc/profile</code>:</p>
+				<pre><code>umask 0077</code></pre>
+				<p>That's it! We now have a base hardened system. This could be a good starting point for a server, or perhaps a desktop system with a Wayland-based window manager.</p>
 			</div>
-			<div class="col-lg-2">
-			</div>
-		</div>
+			<div class="col-lg-2"></div>
+	</div>
 
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-			crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-			crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-			crossorigin="anonymous"></script>
-</body>
-
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
 </html>
